@@ -1,0 +1,39 @@
+# Our Platform
+
+Our Platform is a product design and industrial intelligence studio creating web experiences, conversational and voice interfaces, connected workflows, context-aware decisions, MCP servers, agent harnesses, long-term memory, industrial data pipelines, world models, and digital twins.
+
+## Capability pages
+
+- /services/context-aware-decisions
+- /services/mcp-agent-infrastructure
+- /services/long-term-memory
+- /services/industrial-agentic-systems
+- /services/industrial-data-pipelines
+- /services/world-models-digital-twins
+- /services/grounded-knowledge-systems
+- /services/multi-agent-orchestration
+- /services/cloud-infrastructure
+
+## Studio FAQ
+
+- /ai-seo-faq — direct answers about the studio, product design, industrial AI systems, delivery, and trust
+
+## AI visibility
+
+We design AI visibility systems that help search engines, answer systems, and agents discover, interpret, cite, and navigate a site. The work includes information architecture, server-rendered answers, entity clarity, structured data, crawler controls, evidence-rich pages, and citation measurement.
+
+## Grounded knowledge systems
+
+Retrieval-augmented generation, embeddings, semantic search, and semantic layers keep AI answers connected to traceable source meaning.
+
+## Coordinated agent systems
+
+Specialist agents share context, tools, routing, evaluations, and escalation rules when a multi-agent workflow is justified.
+
+## Cloud and networking
+
+AWS architecture across EC2, Fargate, ECR, Lambda, VPC boundaries, delivery pipelines, observability, and secure service-to-service networking.
+
+## Operating model
+
+We connect a physical lifecycle (site, production, quality, logistics, customer) with an AI lifecycle (events, models, agents, decisions, monitoring, feedback). The homepage demonstrates the system through Services, Workflow, Laboratory, About, and Contact subsections.
