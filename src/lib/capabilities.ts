@@ -1,0 +1,39 @@
+export type CapabilityId =
+  | 'web' | 'chat' | 'voice' | 'business' | 'calendar' | 'message'
+  | 'decisions' | 'agent-infrastructure' | 'memory' | 'industrial-agents' | 'data-pipelines' | 'world-models' | 'ai-visibility' | 'grounded-knowledge' | 'multi-agent-systems' | 'cloud-infrastructure';
+
+export type LaboratoryDemo = 'compare' | 'chat' | 'flow' | 'responsive' | 'calendar' | 'visibility' | 'semantic-retrieval' | 'cloud-infrastructure';
+
+export type Capability = {
+  id: CapabilityId;
+  title: string;
+  eyebrow: string;
+  promise: string;
+  outcome: string;
+  tags: string[];
+  visualMode: 'human' | 'system' | 'combined';
+  laboratoryDemo: LaboratoryDemo;
+  contactType?: string;
+  technicalDetail?: string[];
+};
+
+export const capabilities: Capability[] = [
+  { id: 'web', title: 'Web experiences', eyebrow: '01 / Presence', promise: 'Clear, expressive websites that make the first interaction feel inevitable', outcome: 'A memorable front door with a visual system that stays understandable', tags: ['strategy', 'interaction', 'motion'], visualMode: 'human', laboratoryDemo: 'responsive' },
+  { id: 'chat', title: 'Interfaces that listen', eyebrow: '02 / Conversation', promise: 'Helpful assistants that listen closely and know when to hand back to a human', outcome: 'Conversation flows that feel calm, useful, and testable', tags: ['conversational AI', 'handoffs', 'prototyping'], visualMode: 'human', laboratoryDemo: 'chat' },
+  { id: 'voice', title: 'Voice, with presence', eyebrow: '03 / Voice', promise: 'Natural voice flows for moments when a screen is too much friction', outcome: 'Spoken interactions with graceful confirmation and recovery states', tags: ['voice interfaces', 'accessibility', 'flows'], visualMode: 'human', laboratoryDemo: 'chat' },
+  { id: 'business', title: 'Connected workflows', eyebrow: '04 / Operations', promise: 'Small automations that turn scattered tools into one calm operating picture', outcome: 'Less repeated coordination and clearer process ownership', tags: ['workflow automation', 'handoffs', 'operations'], visualMode: 'combined', laboratoryDemo: 'flow' },
+  { id: 'calendar', title: 'Time, made visible', eyebrow: '05 / Planning', promise: 'Scheduling experiences that respect attention and make the next step obvious', outcome: 'Planning surfaces that make constraints and focus visible', tags: ['scheduling', 'constraints', 'focus'], visualMode: 'human', laboratoryDemo: 'calendar' },
+  { id: 'message', title: 'Content with a point of view', eyebrow: '06 / Reach', promise: 'Thoughtful content systems that keep good ideas moving without losing their voice', outcome: 'Reusable message patterns with a human point of view', tags: ['content systems', 'voice', 'editorial'], visualMode: 'human', laboratoryDemo: 'responsive' },
+  { id: 'decisions', title: 'The next right move', eyebrow: '07 / Context-aware decisions', promise: 'Choose the next move with the whole situation in view', outcome: 'Signals, constraints, history, and goals become one legible decision surface', tags: ['context-aware AI', 'risk', 'human oversight'], visualMode: 'combined', laboratoryDemo: 'chat', contactType: 'decisions', technicalDetail: ['Context assembly', 'Decision policies', 'Risk-aware fallbacks'] },
+  { id: 'agent-infrastructure', title: 'Tools agents can rely on', eyebrow: '08 / Agent systems', promise: 'Connect agents to operational tools through typed, governed interfaces', outcome: 'Permissions, retries, evaluations, and traces make agent work testable', tags: ['MCP servers', 'tool calling', 'harnesses'], visualMode: 'system', laboratoryDemo: 'chat', contactType: 'agent-infrastructure', technicalDetail: ['MCP servers', 'Evaluation harnesses', 'Observability and recovery'] },
+  { id: 'memory', title: 'Memory that earns trust', eyebrow: '09 / Long-term context', promise: 'Carry the right context forward without blindly storing everything', outcome: 'Recall stays relevant, inspectable, and governed by the people who use it', tags: ['long-term memory', 'retrieval', 'retention'], visualMode: 'combined', laboratoryDemo: 'chat', contactType: 'memory', technicalDetail: ['Memory boundaries', 'Relevance scoring', 'Human correction loops'] },
+  { id: 'industrial-agents', title: 'Operational intelligence', eyebrow: '10 / Industrial AI', promise: 'Coordinate people, machines, data, and decisions across the operating loop', outcome: 'Agentic workflows operate with clear handoffs, authority, and human review', tags: ['industrial agents', 'operations', 'deployment'], visualMode: 'combined', laboratoryDemo: 'compare', contactType: 'industrial-agents', technicalDetail: ['Operational orchestration', 'Human-in-the-loop controls', 'Outcome telemetry'] },
+  { id: 'data-pipelines', title: 'The industrial data spine', eyebrow: '11 / Data infrastructure', promise: 'Move industrial data from live event streams to analysis-ready storage', outcome: 'Kafka, Flink, Spark, and MinIO form a dependable spine for operations and learning', tags: ['Kafka', 'Flink', 'Spark', 'MinIO'], visualMode: 'system', laboratoryDemo: 'flow', contactType: 'data-pipelines', technicalDetail: ['Event ingestion', 'Stream and batch processing', 'Durable object storage'] },
+  { id: 'world-models', title: 'Simulate before you commit', eyebrow: '12 / World models', promise: 'Explore consequential decisions before committing real-world resources', outcome: 'Counterfactual futures become visible, comparable, and easier to govern', tags: ['world models', 'digital twins', 'simulation'], visualMode: 'system', laboratoryDemo: 'compare', contactType: 'world-models', technicalDetail: ['State estimation', 'Counterfactual rollouts', 'Confidence and fallback'] },
+  { id: 'ai-visibility', title: 'Be the answer worth citing', eyebrow: '13 / AI visibility', promise: 'Make your expertise legible to search engines, answer systems, and the agents acting on their behalf', outcome: 'A crawlable, evidence-rich site with clear entities, structured answers, and measurable discovery paths', tags: ['AI SEO', 'GEO', 'structured data'], visualMode: 'combined', laboratoryDemo: 'visibility', technicalDetail: ['Information architecture', 'Crawler controls', 'Citation measurement'] },
+  { id: 'grounded-knowledge', title: 'Knowledge you can trace', eyebrow: '14 / Grounded knowledge', promise: 'Retrieve the right evidence before a system generates an answer or recommendation', outcome: 'RAG, embeddings, semantic search, and a shared semantic layer keep answers connected to source truth', tags: ['RAG', 'embeddings', 'semantic search', 'semantic layer'], visualMode: 'system', laboratoryDemo: 'semantic-retrieval', technicalDetail: ['Retrieval design', 'Embedding strategy', 'Semantic contracts'] },
+  { id: 'multi-agent-systems', title: 'Coordinated agent systems', eyebrow: '15 / Multi-agent systems', promise: 'Coordinate specialist agents around shared context, tools, and accountable decisions', outcome: 'Routing, shared state, evaluation, and human escalation keep collaboration observable', tags: ['multi-agent', 'orchestration', 'shared state'], visualMode: 'combined', laboratoryDemo: 'flow', technicalDetail: ['Role and routing design', 'Shared context', 'Evaluation and escalation'] },
+  { id: 'cloud-infrastructure', title: 'Cloud foundations that scale', eyebrow: '16 / Cloud and networking', promise: 'Build AWS infrastructure that stays observable, secure, and ready for the next release', outcome: 'Compute, containers, serverless functions, registries, and network boundaries work as one dependable system', tags: ['AWS', 'EC2', 'Fargate', 'ECR', 'Lambda', 'networking'], visualMode: 'system', laboratoryDemo: 'cloud-infrastructure', technicalDetail: ['AWS architecture', 'Container and serverless delivery', 'Network and security boundaries'] },
+];
+
+export const capabilityById = Object.fromEntries(capabilities.map((item) => [item.id, item])) as Record<CapabilityId, Capability>;
